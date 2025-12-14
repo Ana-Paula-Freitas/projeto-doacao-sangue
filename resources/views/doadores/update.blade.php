@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doadores {{$doadores->nome}} </title>
+    <title>Doadores {{$doador->nome}} </title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         </div>
         <div>
             <label for="cidade">Cidade</label>
-            <input type="checkbox" id="cidade" name="cidade" value="{{$doador->cidade}}">
+            <input type="text" id="cidade" name="cidade" value="{{$doador->cidade}}">
         </div>
         <div>
             <label for="uf">UF</label>
@@ -60,7 +60,7 @@
         </div>
         <div>
             <label for="data_nascimento">Data de Nascimento</label>
-            <input type="text" id="data_nascimento" name="data_nascimento" value="{{$doador->data_nascimento}}">
+            <input type="date" id="data_nascimento" name="data_nascimento" value="{{$doador->data_nascimento}}">
         </div>
         <div>
             <label for="peso">Peso</label>
@@ -78,7 +78,7 @@
             <label for="sexo">Sexo</label>
             <input type="text" id="sexo" name="sexo" value="{{$doador->sexo}}">
         </div>
-        <button type="submit">Cadastrar Doador</button>
+        <button type="submit">Atualizar Doador</button>
     </form>
 </body>
 

@@ -9,7 +9,7 @@
 
 <body>
 
-    <a href="{{ route('doador.index') }}">
+    <a href="{{ route('doadores.index') }}">
         <button>Voltar</button>
     </a>
 </body>

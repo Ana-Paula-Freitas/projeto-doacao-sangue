@@ -17,7 +17,7 @@
 
 
     <form action="{{ route('doadores.delete', 
-            $piscina->id) }}" method="POST">
+            $doador->id) }}" method="POST">
         @csrf
         @method('DELETE')
 

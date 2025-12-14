@@ -11,6 +11,10 @@
 <body>
     <form action="{{ route('doadores.store')}}" method="POST">
         @csrf
+        <div hidden>
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status" value="ativo">
+        </div>
         <div>
             <label for="nome">Nome</label>
             <input type="text" id="nome" name="nome">
@@ -33,7 +37,7 @@
         </div>
         <div>
             <label for="cidade">Cidade</label>
-            <input type="checkbox" id="cidade" name="cidade">
+            <input type="text" id="cidade" name="cidade">
         </div>
         <div>
             <label for="uf">UF</label>
@@ -61,7 +65,7 @@
         </div>
         <div>
             <label for="data_nascimento">Data de Nascimento</label>
-            <input type="text" id="data_nascimento" name="data_nascimento">
+            <input type="date" id="data_nascimento" name="data_nascimento">
         </div>
         <div>
             <label for="peso">Peso</label>

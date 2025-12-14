@@ -30,7 +30,7 @@ Route::post('store/',
 [DoadorController::class, 'store'])
 ->name('doadores.store');
 
-Route::post('update/{id}', 
+Route::get('update/{id}', 
 [DoadorController::class, 'edit'])
 ->name('doadores.update');
 
@@ -40,4 +40,4 @@ Route::post('store/',
 
 Route::delete('delete/{id}', 
 [DoadorController::class, 'delete', 'id'])
-->name('piscinas.delete');
+->name('doadores.delete');

@@ -30,6 +30,7 @@ class DoadorController extends Controller
     public function store(Request $request)
     {
         Doador::create([
+        'status'=> $request->status,
         'cpf'=> $request->cpf,
         'rg' => $request->rg,
         'nome' => $request->nome,
@@ -42,14 +43,14 @@ class DoadorController extends Controller
         'numero' => $request->numero,
         'bairro' => $request->bairro,
         'telefone' => $request->telefone,
-        'data_nascimento' => $request->data_nacimento,
+        'data_nascimento' => $request->data_nascimento,
         'peso' => $request->peso,
         'tipo_sanguineo' => $request->tipo_sanguineo,
         'profissao'=> $request->profissao,
         'sexo' => $request->sexo
         ]);
 
-        return redirect()->route('index.doador');
+        return redirect()->route('doadores.index');
     }
 
     /**
@@ -69,7 +70,7 @@ class DoadorController extends Controller
     {
         $doador = Doador::findOrFail($id);
 
-        return view('doadres.update')
+        return view('doadores.update')
         ->with(['doador', $doador]);
     }
 
@@ -80,7 +81,8 @@ class DoadorController extends Controller
     {
         $doador = Doador::findOrFail($id);
 
-        $doador->update([
+        $doador->update([        
+            'status'=> $request->status,
             'cpf'=> $request->cpf,
             'rg' => $request->rg,
             'nome' => $request->nome,
@@ -93,7 +95,7 @@ class DoadorController extends Controller
             'numero' => $request->numero,
             'bairro' => $request->bairro,
             'telefone' => $request->telefone,
-            'data_nascimento' => $request->data_nacimento,
+            'data_nascimento' => $request->data_nascimento,
             'peso' => $request->peso,
             'tipo_sanguineo' => $request->tipo_sanguineo,
             'profissao'=> $request->profissao,
@@ -111,6 +113,6 @@ class DoadorController extends Controller
         $doador = Doador::findOrFail($id);
 
         $doador->delete();
-        return redirect()->route('doador.index');
+        return redirect()->route('doadores.index');
     }
 }

@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('logradouro');
             $table->unsignedInteger('numero');
             $table->string('bairro');
-            $table->string('cep', 9);
+            $table->string('cep', 11);
             $table->string('telefone', 15);
             $table->dateTime('data_nascimento');
             $table->decimal('peso', 5,2);
