@@ -9,10 +9,10 @@ class Solicitacao extends Model
     protected $fillable = [
         'status',
         'id_hemonucleo',
-        'tipoSolicitacao',
-        'quantSolicitada',
-        'nomePaciente',
-        'CPFpaciente',
-        'dataSolicitacao'
+        'tipo_solicitacao',
+        'quant_solicitada',
+        'nome_paciente',
+        'cpf_paciente',
+        'data_solicitacao'
     ];
 }

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('status', 20);
             $table->string('tipo_sangue', 3);
-            $table->foreignId('id_hemonucleo')
+            $table->foreignId('hemonucleo_id')
                             ->constrained('hemonucleo')
                             ->onDelete('cascade' );
             $table->unsignedInteger('quant');

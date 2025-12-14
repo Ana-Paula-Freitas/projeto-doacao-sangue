@@ -17,14 +17,14 @@ return new class extends Migration
             $table->string('cnpj', 18)->unique;
             $table->string('nome');
             $table->string('email')->unique();
-            $table->string('password');
+            $table->string('senha');
             $table->string('cidade');
             $table->string('uf', 2);
             $table->string('logradouro');
             $table->unsignedInteger('numero');
             $table->string('bairro');
             $table->string('cep', 9);
-            $table->string('telefone');
+            $table->string('telefone', 15);
             $table->string('nome_responsavel');
             $table->timestamps();
         });

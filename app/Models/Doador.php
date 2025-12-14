@@ -8,22 +8,24 @@ class Doador extends Model
 {
     protected $fillable = [
         'status',
-        'CPF',
-        'RG',
+        'cpf',
+        'rg',
         'nome',
         'email',
         'senha',
         'cidade',
-        'UF',
-        'CEP',
+        'uf',
+        'cep',
         'logradouro',
         'numero',
         'bairro',
         'telefone',
-        'DN',
+        'data_nascimento',
         'peso',
-        'tipoSanguineo',
+        'tipo_sanguineo',
         'profissao',
         'sexo'
     ];
+
+    protected $table = 'doadores';
 }

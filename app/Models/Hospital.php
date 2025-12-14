@@ -6,18 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hospital extends Model
 {
+    protected $table = 'hospital';
     protected $fillable = [
         'status',
-        'CNPJ',
+        'cnpj',
         'nome',
         'email',
         'senha',
         'cidade',
-        'UF',
-        'CEP',
+        'uf',
+        'cep',
         'logradouro',
         'numero',
         'bairro',
-        'telefone'
+        'telefone',
+        'nome_responsavel'
     ];
 }

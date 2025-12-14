@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('distribuicao', function (Blueprint $table) {
             $table->id();
             $table->string('status');
-            $table->foreignId('id_hospital')
+            $table->foreignId('hospital_id')
                             ->constrained('hospital')
                             ->onDelete('cascade' );
             $table->dateTime('data_entrega');

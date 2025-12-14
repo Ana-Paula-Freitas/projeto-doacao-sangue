@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('cpf_paciente', 14)->nullable();
             $table->string('tipo_sangue', 3)->nullable();
             $table->string('obs')->nullable();
-            $table->foreignId('id_hemonucleo')
+            $table->foreignId('hemonucleo_id')
                             ->constrained('hemonucleo')
                             ->onDelete('cascade' );
             $table->timestamps();
